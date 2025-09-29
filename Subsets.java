@@ -6,12 +6,12 @@ class Solution {
     }
 
     private void backtrack(int index, int[] nums, List<Integer> current, List<List<Integer>> result) {
-        result.add(new ArrayList<>(current)); // Add current subset to result
+        result.add(new ArrayList<>(current)); 
 
         for (int i = index; i < nums.length; i++) {
-            current.add(nums[i]);                      // Choose
-            backtrack(i + 1, nums, current, result);   // Explore
-            current.remove(current.size() - 1);        // Un-choose
+            current.add(nums[i]);                      
+            backtrack(i + 1, nums, current, result);   
+            current.remove(current.size() - 1);        
         }
     }
 }
